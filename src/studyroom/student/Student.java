@@ -29,5 +29,7 @@ public class Student {
         attended = true;
     }
 
-
+    public boolean needsArrivalCheck(LocalTime currentTime) {
+        return !attended && !currentTime.isBefore(expectedArrivalTime);
+    }
 }
