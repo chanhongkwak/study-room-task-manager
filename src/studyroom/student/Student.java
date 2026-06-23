@@ -30,6 +30,6 @@ public class Student {
     }
 
     public boolean needsArrivalCheck(LocalTime currentTime) {
-        return !attended && !currentTime.isBefore(expectedArrivalTime);
+        return !attended && !currentTime.isBefore(expectedArrivalTime.plusMinutes(15));
     }
 }
